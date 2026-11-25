@@ -1,8 +1,5 @@
-# Introduction Computational Science - GT lab (iterated prisoner's dilemma)
-# Giovanny Marchena (16641485)
-# <student 2 name> (<student id>)
-#
-# file: game.py
+# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# one match and the payoff table
 
 """One match: two strategies play the prisoner's dilemma for N rounds.
 

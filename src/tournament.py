@@ -1,8 +1,5 @@
-# Introduction Computational Science - GT lab (iterated prisoner's dilemma)
-# Giovanny Marchena (16641485)
-# <student 2 name> (<student id>)
-#
-# file: tournament.py
+# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# round-robin tournament
 
 """Round robin tournament: every strategy plays every other one once.
 

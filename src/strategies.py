@@ -1,8 +1,5 @@
-# Introduction Computational Science - GT lab (iterated prisoner's dilemma)
-# Giovanny Marchena (16641485)
-# <student 2 name> (<student id>)
-#
-# file: strategies.py
+# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# prisoner's dilemma strategies
 
 """All our prisoner's dilemma strategies live here.
 

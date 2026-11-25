@@ -1,8 +1,5 @@
-# Introduction Computational Science - GT lab (iterated prisoner's dilemma)
-# Giovanny Marchena (16641485)
-# <student 2 name> (<student id>)
-#
-# file: gui.py
+# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# pyics viewer for a single match
 
 """GUI for watching a single prisoner's dilemma match, built on pyics.
 

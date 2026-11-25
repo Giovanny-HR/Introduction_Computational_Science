@@ -1,8 +1,5 @@
-# Introduction Computational Science - GT lab (iterated prisoner's dilemma)
-# Giovanny Marchena (16641485)
-# <student 2 name> (<student id>)
-#
-# file: main.py
+# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# run the tournament and print the ranking
 
 """Run this file to play the tournament and print the ranking.
 

@@ -1,7 +1,5 @@
-# Introduction Computational Science - GT lab (iterated prisoner's dilemma)
-# Giovanny Marchena (16641485)
-#
-# file: gm_strategies.py
+# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# my five strategies as rule tables
 #
 # My five strategies written for Mees's Strategy class (strategies.py).
 # The rule tables were generated from my tested logic, so they match exactly.
