@@ -272,7 +272,7 @@ class GUI:
     def showHelp(self, widget, text):
         def setText(self):
             self.statusText.set(text)
-            self.status.configure(foreground='blue')
+            self.status.configure(foreground='navy')
 
         def showHelpLeave(self):
             self.statusText.set(self.statusStr)
