@@ -1,37 +1,17 @@
 # Giovanny Marchena (16641485), <student 2 name> (<student id>)
 # prisoner's dilemma strategies
 
-"""All our prisoner's dilemma strategies live here.
+"""Our prisoner's dilemma strategies.
 
-How a strategy works in this project:
-  a strategy is just a function. it gets two lists, my own past moves and the
-  opponent's past moves (oldest first, each move is "C" or "D"), and it returns
-  my next move, "C" or "D". the first round both lists are empty.
-
-  example - copy whatever the opponent did last:
-      def copycat(me, opp):
-          if not opp:        # first round, nothing to copy yet
-              return C
-          return opp[-1]
-
-at the bottom there is a STRATEGIES dict (name -> function). the tournament
-loops over that dict, so a strategy only joins the game once it is listed there.
-
-Strategies by Giovanny Marchena (16641485), one line each:
-  suspicious_tft        copy the opponent, but open with defect
-  cautious_reciprocator copy them, but wait one extra round before trusting again
-  forgiving_tft         copy them, but offer peace after a both-defect round
-  two_move_prober       watch their last two moves, punish any inconsistency
-  trust_builder         cooperate while they have cooperated at least as much as defected
+each strategy is a function (me, opp) -> "C"/"D" from the two move histories.
+add one to the STRATEGIES dict at the bottom to put it in the tournament.
 """
 
 C = "C"
 D = "D"
 
 
-# =====================================================================
-# benchmark (the brief asks us to include tit for tat)
-# =====================================================================
+# benchmark: tit for tat (required by the brief)
 
 def tit_for_tat(me, opp):
     # cooperate first, then just copy what they did last
@@ -40,9 +20,7 @@ def tit_for_tat(me, opp):
     return opp[-1]
 
 
-# =====================================================================
-# reference opponents - not original, just handy to test against
-# =====================================================================
+# reference opponents, just for testing
 
 def always_defect(me, opp):
     return D
@@ -51,10 +29,7 @@ def always_cooperate(me, opp):
     return C
 
 
-# =====================================================================
-# strategies by Giovanny Marchena (16641485)
-# theme: reciprocity (how fast to forgive) plus one memory-based idea
-# =====================================================================
+# my strategies
 
 def suspicious_tft(me, opp):
     # tit for tat but starts mean. tests if a distrustful opening pays off
@@ -104,21 +79,10 @@ def trust_builder(me, opp):
     return D
 
 
-# =====================================================================
-# strategies by <student 2 name> (<student id>)
-# add your five here, same shape as above: def name(me, opp): return C or D.
-# then list each one in the STRATEGIES dict below so it joins the tournament.
-# stub to copy:
-#   def my_strategy(me, opp):
-#       if not opp:
-#           return C
-#       return opp[-1]
-# =====================================================================
+# <student 2 name> strategies go here, then add them to STRATEGIES below
 
 
-# =====================================================================
-# register every strategy here (name -> function). the tournament reads this.
-# =====================================================================
+# all strategies the tournament plays
 
 STRATEGIES = {
     "tit_for_tat": tit_for_tat,

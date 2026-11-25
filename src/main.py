@@ -1,18 +1,7 @@
 # Giovanny Marchena (16641485), <student 2 name> (<student id>)
 # run the tournament and print the ranking
 
-"""Run this file to play the tournament and print the ranking.
-
-how the files fit together:
-  strategies.py  -> defines each strategy and lists them in STRATEGIES
-  game.py        -> plays one match between two strategies (the payoff table)
-                    and has show_match() for round-by-round debugging
-  tournament.py  -> plays every pair, adds up the scores
-  main.py        -> this file, runs the tournament and prints the result
-
-the GUI is a separate piece we have not built yet. see gui.py for the plan.
-run it from inside this folder with:  python main.py
-"""
+"""Run the tournament and print the ranking."""
 
 from strategies import STRATEGIES
 from game import show_match

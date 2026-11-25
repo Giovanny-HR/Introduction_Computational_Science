@@ -1,12 +1,7 @@
 # Giovanny Marchena (16641485), <student 2 name> (<student id>)
 # one match and the payoff table
 
-"""One match: two strategies play the prisoner's dilemma for N rounds.
-
-each round both players pick C or D at the same time, using only what has
-happened so far. we add up points with the payoff table from the brief (table 2)
-and return both final scores.
-"""
+"""One match between two strategies, scored with the brief's payoff table."""
 
 from strategies import C, D
 
@@ -39,9 +34,7 @@ def play_match(strat_a, strat_b, rounds=200):
 
 
 def show_match(strat_a, strat_b, name_a="A", name_b="B", rounds=10):
-    """Play a match and print it round by round. Use this to debug a strategy
-    or to show clearly how two of them interact. Keep `rounds` small when
-    printing, 200 lines is a lot to read."""
+    """Play a match and print it round by round (for debugging)."""
     a_moves, b_moves = [], []
     score_a, score_b = 0, 0
     print(f"{name_a}  vs  {name_b}")

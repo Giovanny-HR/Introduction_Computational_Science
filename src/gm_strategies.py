@@ -2,7 +2,7 @@
 # my five strategies as rule tables
 #
 # My five strategies written for Mees's Strategy class (strategies.py).
-# The rule tables were generated from my tested logic, so they match exactly.
+# The rule tables match my function versions exactly.
 # Key format is Mees's: (own_previous_moves, opp_previous_moves) -> next move,
 # both as tuples of length `memory`.
 
@@ -45,7 +45,7 @@ forgiving_tft = Strategy(
 
 # 4. Two-Move Prober: watch the opponent's last two moves, punish any inconsistency.
 #    NOTE: memory=2, so decide() must return initial_choice while fewer than 2
-#    moves have been played (see the bug note I sent). 16 rows.
+#    moves have been played otherwise the key is too short. 16 rows.
 two_move_prober = Strategy(
     name="two_move_prober", initial_choice=C, memory=2, strategy_type="Rule",
     rule={

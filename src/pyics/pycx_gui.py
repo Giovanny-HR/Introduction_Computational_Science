@@ -81,17 +81,20 @@ class GUI:
         self.runPauseString.set("Run")
         self.buttonRun = Button(self.frameSim, width=30, height=2,
                                 textvariable=self.runPauseString,
-                                command=self.runEvent)
+                                command=self.runEvent,
+                                foreground='black', activeforeground='black')
         self.buttonRun.pack(side=TOP, padx=5, pady=5)
 
         self.showHelp(self.buttonRun,
                       "Runs the simulation (or pauses the running simulation)")
         self.buttonStep = Button(self.frameSim, width=30, height=2,
-                                 text="Step Once", command=self.stepOnce)
+                                 text="Step Once", command=self.stepOnce,
+                                 foreground='black', activeforeground='black')
         self.buttonStep.pack(side=TOP, padx=5, pady=5)
         self.showHelp(self.buttonStep, "Steps the simulation only once")
         self.buttonReset = Button(self.frameSim, width=30, height=2,
-                                  text="Reset", command=self.resetModel)
+                                  text="Reset", command=self.resetModel,
+                                  foreground='black', activeforeground='black')
         self.buttonReset.pack(side=TOP, padx=5, pady=5)
         self.showHelp(self.buttonReset, "Resets the simulation")
 
@@ -115,7 +118,9 @@ class GUI:
         if self.param_entries:
             self.buttonSaveParameters = Button(self.frameSim, width=50,
                     height=1, command=self.saveParametersCmd,
-                    text="Save parameters to the running model", state=DISABLED)
+                    text="Save parameters to the running model", state=DISABLED,
+                    foreground='black', activeforeground='black',
+                    disabledforeground='gray30')
             self.showHelp(self.buttonSaveParameters,
                     "Saves the parameter values.\n" +
                     "Not all values may take effect on a running model\n" +
@@ -123,7 +128,8 @@ class GUI:
             self.buttonSaveParameters.pack(side='top', padx=5, pady=5)
             self.buttonSaveParametersAndReset = Button(self.frameSim, width=50,
                     height=1, command=self.saveParametersAndResetCmd,
-                    text="Save parameters to the model and reset the model")
+                    text="Save parameters to the model and reset the model",
+                    foreground='black', activeforeground='black')
             self.showHelp(self.buttonSaveParametersAndReset,
                     "Saves the given parameter values and resets the model")
             self.buttonSaveParametersAndReset.pack(side='top', padx=5, pady=5)

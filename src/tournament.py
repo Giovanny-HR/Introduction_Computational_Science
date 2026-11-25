@@ -1,11 +1,7 @@
 # Giovanny Marchena (16641485), <student 2 name> (<student id>)
 # round-robin tournament
 
-"""Round robin tournament: every strategy plays every other one once.
-
-each strategy's scores from all its matches are added up. that total is how we
-rank them (and later, how the genetic algorithm will measure fitness).
-"""
+"""Round robin: every strategy plays every other once, scores add up."""
 
 from game import play_match
 
