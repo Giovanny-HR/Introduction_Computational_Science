@@ -1,4 +1,4 @@
-# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# Giovanny Marchena (16641485), Mees van Tol (15822311)
 # one match and the payoff table
 
 """One match between two strategies, scored with the brief's payoff table."""

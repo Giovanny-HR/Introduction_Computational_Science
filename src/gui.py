@@ -1,4 +1,4 @@
-# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# Giovanny Marchena (16641485), Mees van Tol (15822311)
 # pyics viewer for a single match
 
 """Watch one match in a window, using the pyics framework from the CA labs.

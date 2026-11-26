@@ -1,4 +1,4 @@
-# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# Giovanny Marchena (16641485), Mees van Tol (15822311)
 # genetic algorithm for the tournament
 
 """Genetic algorithm that evolves a memory-1 strategy.

@@ -1,4 +1,4 @@
-# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# Giovanny Marchena (16641485), Mees van Tol (15822311)
 # my five strategies as rule tables
 #
 # My five strategies written for Mees's Strategy class (strategies.py).

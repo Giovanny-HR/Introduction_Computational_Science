@@ -1,4 +1,4 @@
-# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# Giovanny Marchena (16641485), Mees van Tol (15822311)
 # prisoner's dilemma strategies
 
 """Our prisoner's dilemma strategies.
@@ -6,6 +6,8 @@
 each strategy is a function (me, opp) -> "C"/"D" from the two move histories.
 add one to the STRATEGIES dict at the bottom to put it in the tournament.
 """
+
+import random
 
 C = "C"
 D = "D"
@@ -79,7 +81,69 @@ def trust_builder(me, opp):
     return D
 
 
-# <student 2 name> strategies go here, then add them to STRATEGIES below
+def exploiter(me, opp):
+    # exploits forgiving strategies by alternating between cooperating and defecting
+    if len(opp) % 2 == 1:
+        return C
+    return D
+
+
+def grudge(me, opp):
+    # cooperates until betrayed then defects every following round
+    if not opp:
+        return C
+    if opp[-1] == D or me[-1] == D:
+        return D
+    return C
+
+
+def probabilistic(me, opp):
+    # cooperates and defects at random
+    return random.choice([C,D])
+
+
+def generous(me, opp):
+    # cooperates until opponent defects twice in a row
+    if len(opp) < 2:
+        return C
+    if opp[-1] == D and opp[-2] == D:
+        return D
+    return C
+
+
+def leg_up_tft(me, opp):
+    # tit for that but it defects on random moments
+    # it is more likely to defect the longer both parties cooperate
+    # it detects whenever it reinstated trust and then defects more often
+    if not opp:
+        return C
+
+    me_len = len(me)
+    opp_len = len(opp)
+
+    length = 0
+    for i in range(me_len):
+        if me[me_len - i - 1] == C:
+            length += 1
+        else:
+            break
+    num_coop = length
+
+    length = 0
+    for i in range(opp_len):
+        if opp[opp_len - i - 1] == C:
+            length += 1
+        else:
+            break
+
+    if length < num_coop:
+        num_coop = length
+
+    if random.randint(1, me_len) <= num_coop:
+        return D
+    else:
+        return opp[-1]
+
 
 
 # all strategies the tournament plays
@@ -94,5 +158,10 @@ STRATEGIES = {
     "forgiving_tft": forgiving_tft,
     "two_move_prober": two_move_prober,
     "trust_builder": trust_builder,
-    # --- <student 2>: add yours here, e.g. "my_strategy": my_strategy, ---
+    # --- Mees van Tol (15822311) ---
+    "exploiter": exploiter,
+    "grudge": grudge,
+    "probabilistic": probabilistic,
+    "generous": generous,
+    "leg_up_tft": leg_up_tft,
 }

@@ -1,4 +1,4 @@
-# Giovanny Marchena (16641485), <student 2 name> (<student id>)
+# Giovanny Marchena (16641485), Mees van Tol (15822311)
 # round-robin tournament
 
 """Round robin: every strategy plays every other once, scores add up."""
